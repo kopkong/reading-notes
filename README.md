@@ -1,4 +1,4 @@
-# reading-notes
+#  JavaScript权威指南
 
 * [2.Lexical Structure](https://github.com/kopkong/reading-notes/blob/master/JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/2.Lexical%20Structure.md)
 * [3.Types, Values, and Variables](https://github.com/kopkong/reading-notes/blob/master/JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/3.Types%2C%20Values%2C%20and%20Variables.md)
