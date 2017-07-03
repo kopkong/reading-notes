@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="editor" contenteditable>
+        Click to edit
+    </div>
+
+    <div>
+        <button onclick="saveStorage()">Save Message in Storage!</button>
+        <button onclick="readStorage()">Read Message in Storage!</button>
+    </div>
+</body>
+<script>
+    function postJSON(url, data, callback) {
+        var request = new XMLHttpRequest();
+        request.open("POST", url);
+        request.onreadystatechange = function(){
+            if(request.readyState === 4 && callback){
+                callback(request);
+            }
+        }
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(JSON.stringify(data));
+    }
+
+    var name = localStorage.username;
+
+    // use storage
+    function saveStorage(){
+        //if(name === 'null' || name === undefined){
+        var m = prompt("What is your name?");
+        localStorage.username = m;
+        //}
+    }
+
+    function readStorage(){
+        if(localStorage.username){
+            alert('Your name is : ' + localStorage.username);
+        }else{
+            alert('No name stored！');
+        }
+    }
+
+</script>
+</html>
