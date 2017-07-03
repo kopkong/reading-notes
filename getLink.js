@@ -14,7 +14,7 @@ fs.readdir(__dirname, (err, files) => {
                 fs.readdir(file, (err, mds) => {
                     mds.forEach(md => {
                         if(md.indexOf('.md') !== -1){
-                            let title = '* [' + md.replace('.md','') + '] (https://github.com/kopkong/reading-notes/blob/master/';
+                            let title = '* [' + md.replace('.md','') + '](https://github.com/kopkong/reading-notes/blob/master/';
 
                             title += querystring.escape(file) + '/' + querystring.escape(md) + ')';
                             console.log(title);
